@@ -1,0 +1,98 @@
+$color: #bdbdbd;
+$bgColor: #fffdfa;
+#wedding-website .rsvp-page {
+  #thank-you {
+    margin: 60px 0;
+    font-size: 25px;
+  }
+  form {
+    padding-bottom: 40px;
+    input,
+    label {
+      display: block;
+    }
+    ul {
+      background-color: $bgColor;
+      border: 3px solid $color;
+      list-style-type: none;
+      margin: 3em auto;
+      padding: 0;
+      max-width: 350px;
+    }
+    li {
+      border-bottom: 1px solid $color;
+      margin: 0;
+      position: relative;
+      list-style: none;
+      label {
+        pointer-events: none;
+        font-size: 70%;
+        letter-spacing: 0.03em;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        text-transform: uppercase;
+        .active &,
+        input[type=text]:focus+& {
+          color: darken(#0074D9, 10);
+          font-weight: bold;
+          letter-spacing: -0.01em;
+        }
+        &.radio-field-label {
+          position: static;
+          margin: 2px 0 -5px 10px;
+        }
+      }
+      input[type=radio] + label {
+        pointer-events: auto;
+        position: static;
+        display: inline-block;
+        width: calc(100% - 50px);
+        font-size: 18px;
+        vertical-align: top;
+        line-height: 40px;
+      }
+      input[type=radio] {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+      }
+    }
+    input {
+      color: darken($color, 15);
+      background-color: transparent;
+    }
+    input,
+    label {
+      transition: color 0.4s ease, background-color 0.1s ease-in-out;
+    }
+    input,
+    input:focus {
+      border: none;
+      font-size: 18px;
+      margin: 0;
+      padding: 2em 10px 10px;
+      outline: none;
+      width: 100%;
+    }
+    input[type=text]:focus {
+      color: inherit;
+      background-color: white;
+      box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3) inset;
+    }
+    input.btn-submit {
+      padding: 20px 0;
+      margin: 1px;
+      width: calc(100% - 2px);
+      cursor: pointer;
+      color: inherit;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
+    }
+    .uneditable {
+      input {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

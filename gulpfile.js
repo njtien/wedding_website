@@ -5,6 +5,7 @@ var clean = require('gulp-clean');
 var fileinclude = require('gulp-file-include');
 var Server = require('karma').Server;
 var babel = require('gulp-babel');
+var concat = require('gulp-concat');
 
 // SASS
 gulp.task('clean-css', function () {
@@ -12,8 +13,9 @@ gulp.task('clean-css', function () {
     .pipe(clean());
 });
 gulp.task('sass', ['clean-css'], function () {
-  return gulp.src('src/sass/style.scss')
+  return gulp.src(['src/sass/css-reset.scss', 'src/sass/*.scss'])
     .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('./public/css'));
 });
 

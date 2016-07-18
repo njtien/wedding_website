@@ -7,30 +7,30 @@
 
 <body id="wedding-website">
   @@include('navigation.partial.html')
-  <div id="rsvp">
-    <h2 align="center">RSVP</h2>
-    <p class="center">
-      Please kindly respond by
-      <br />
-      <span class="highlight">Sunday, August 21 2016</span>
-    </p>
+  <div id="rsvp" class="rsvp-page">
     <!-- LOGIN -->
     <div id="rsvp-login">
+      <h2 align="center">RSVP</h2>
+      <p class="center">
+        Please kindly respond by
+        <br />
+        <span class="highlight">Sunday, August 21 2016</span>
+      </p>
       <form action="javascript:checkAuthInput()" id="email-form">
         <div class="form">
-          <div class="center">
-            Username
-            <br />
-            <input type="text" id="secretUsername">
-          </div>
-          <div class="center">
-            Password
-            <br />
-            <input type="text" id="secretPassword">
-          </div>
-          <div class="center">
-            <input type="submit" class="btn-submit">
-          </div>
+          <ul>
+            <li>
+              <input type="text" name="secretUsername" id="secretUsername">
+              <label for="secretUsername">Username</label>
+            </li>
+            <li>
+              <input type="text" name="secretPassword" id="secretPassword">
+              <label for="secretPassword">Password</label>
+            </li>
+            <div class="center">
+              <input type="submit" class="btn-submit">
+            </div>
+          </ul>
         </div>
         <p class="center">
           <span class="note">
@@ -42,19 +42,44 @@
     <!-- VISUAL INVITE -->
     <!-- RSVP -->
     <div id="rsvp-form" style="display: none">
-      RSVP FORM
       <form action="javascript:rsvpFormSubmit()">
-        <input type="text" name="rsvpEmail">
-        <input type="text" name="rsvpMeta">
-        <input type="text" name="rsvpName1">
-        <input type="text" name="rsvpAnswer1">
-        <input type="text" name="rsvpName1">
-        <input type="text" name="rsvpAnswer2">
-        <input type="submit" class="btn-submit">
+        <ul>
+          <li class="uneditable">
+            <input type="text" id="rsvpEmail" name="rsvpEmail" disabled>
+            <label for="rsvpEmail">Email</label>
+          </li>
+          <li class="uneditable">
+            <input type="text" id="rsvpName1" name="rsvpName1" disabled>
+            <label for="rsvpName1">Guest Name</label>
+          </li>
+          <li>
+            <label class="radio-field-label">Your response</label>
+            <input type="radio" id="rsvpAnswer1true" name="rsvpAnswer1" value="Wouldn%E2%80%99t+miss+it+for+the+world"/>
+            <label for="rsvpAnswer1true">Yes</label>
+            <br>
+            <input type="radio" id="rsvpAnswer1false" name="rsvpAnswer1" value="Will+be+there+in+spirit"/>
+            <label for="rsvpAnswer1false">No</label>
+          </li>
+          <div id="plus-one-optional-group" style="display: none">
+            <li class="uneditable">
+              <input type="text" id="rsvpName2" name="rsvpName2" disabled>
+              <label for="rsvpName2">Guest +1 Name</label>
+            </li>
+            <li>
+              <label class="radio-field-label">Your response</label>
+              <input type="radio" id="rsvpAnswer2true" name="rsvpAnswer2" value="Wouldn%E2%80%99t+miss+it+for+the+world"/>
+              <label for="rsvpAnswer2true">Yes</label>
+              <br>
+              <input type="radio" id="rsvpAnswer2false" name="rsvpAnswer2" value="Will+be+there+in+spirit"/>
+              <label for="rsvpAnswer2false">No</label>
+            </li>
+          </div>
+          <input type="submit" class="btn-submit">
+        </ul>
       </form>
-      <div id="thank-you" style="display: none">
-        Thanks for registering! You'll be first to know when it's ready.
-      </div>
+    </div>
+    <div id="thank-you" class="center" style="display: none">
+      Thanks for your RSVP!
     </div>
   </div>
   @@include('footer.partial.html')

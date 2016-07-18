@@ -175,7 +175,6 @@ function checkAuthInput() {
   var email = document.getElementById('secretUsername').value;
   var password = document.getElementById('secretPassword').value;
   if (email.length === 0 || password.length === 0) {
-    console.log('no input');
     return;
   }
   var secret = email.trim().toUpperCase() + ' ' + password.trim().toUpperCase();
@@ -194,7 +193,6 @@ function useSuperSecretCode(secret) {
       tmp = tmp.toString(CryptoJS.enc.Utf8);
       if (tmp == '2995520311108823') {
         foundGuest = true;
-        console.log('found true');
         for (var key in secretGuestData[i]) {
           if (secretGuestData[i].hasOwnProperty(key)) {
             if (key !== 'secretcheck') {
@@ -219,7 +217,12 @@ function useSuperSecretCode(secret) {
 function acceptLogin() {
   document.getElementById('rsvp-login').style.display = 'none';
   document.getElementById('rsvp-form').style.display = 'block';
-  console.log(decryptedGuest);
+  document.getElementById('rsvpEmail').value = decryptedGuest.email;
+  document.getElementById('rsvpName1').value = decryptedGuest.name;
+  document.getElementById('rsvpName2').value = decryptedGuest.plusone;
+  if(decryptedGuest.plusone && decryptedGuest.plusone != ''){
+    document.getElementById('plus-one-optional-group').style.display = 'block';
+  }
 }
 
 function rsvpFormSubmit() {
@@ -235,12 +238,12 @@ function rsvpFormSubmit() {
     answer2: 'entry.46739732='
   };
   var formInputs = {
-    email: document.getElementById('rsvpEmail').value,
-    meta: document.getElementById('rsvpMeta').value,
-    name1: document.getElementById('rsvpName1').value,
-    answer1: document.getElementById('rsvpAnswer1').value,
-    name2: document.getElementById('rsvpName1').value,
-    answer2: document.getElementById('rsvpAnswer2').value
+    email: decryptedGuest.email,
+    meta: decryptedGuest.formUrlCode,
+    name1: decryptedGuest.name,
+    answer1: $('input[name=rsvpAnswer1]:checked').val(),
+    name2: decryptedGuest.plusone,
+    answer2: $('input[name=rsvpAnswer2]:checked').val()
   };
 
   // xhr:
@@ -255,9 +258,8 @@ function rsvpFormSubmit() {
   formDataURI += formTags.email + encodeURIComponent(formInputs.email) + '&';
   formDataURI += formTags.meta + encodeURIComponent(formInputs.meta) + '&';
   formDataURI += formTags.name1 + encodeURIComponent(formInputs.name1) + '&';
-  formDataURI += formTags.answer1 + encodeURIComponent(formInputs.answer1) + '&';
+  formDataURI += formTags.answer1 + formInputs.answer1 + '&';
   formDataURI += formTags.name2 + encodeURIComponent(formInputs.name2) + '&';
-  formDataURI += formTags.answer2 + encodeURIComponent(formInputs.answer2);
-  console.log('formDataURI: ', formDataURI);
+  formDataURI += formTags.answer2 + formInputs.answer2;
   r.send(formDataURI);
 }
