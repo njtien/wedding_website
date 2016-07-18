@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  @@include('meta-head.partial.html')
+  <title>Our Wedding</title>
+</head>
+
+<body id="wedding-website">
+  @@include('navigation.partial.html')
+  <div class="our-wedding">
+    <!-- WHEN AND WHERE -->
+    <div class="hero-banner our-wedding-hero center" id="whenwhere">
+      <div class="when-and-where">
+        <h2>When &amp; Where</h2>
+        <p>
+          <span class="highlight">
+              Friday, November 11 2016<br />
+            4:00 - 10:00 pm<br />
+            </span>
+        </p>
+        <p>
+          <span class="highlight">Salish Lodge &amp; Spa</span>
+          <br /> 6501 Railroad Ave
+          <br /> Snoqualmie, WA
+          <br />
+        </p>
+        <p>
+          <a href="https:www.google.com/maps?q=salish+lodge+snoqualmie" class="button">Google Maps</a>
+        </p>
+      </div>
+    </div>
+    <div class="google-maps-wrp">
+      <button class="close-button">&#x2716;</button>
+      <iframe id="google-map-frame" class="google-map-frame" value="seamless" src="https:www.google.com/maps?q=salish+lodge+snoqualmie&maptype=satellite&output=embed&zoom=18"></iframe>
+    </div>
+    <!-- PARKING -->
+    <div id="Parking">
+      <h3>Parking</h3>
+      <p>
+        <span class="highlight">Free public parking</span> is available across the street from Salish Lodge. Please use the footbridge to safely cross over to the lodge.
+        <br />
+        <span class="highlight">Valet parking</span> at the lodge costs $8. If you are staying at Salish Lodge, valet parking is complimentary.
+      </p>
+      <!-- WEATHER AND ATTIRE -->
+      <div id="weatherattire">
+        <h2>Weather &amp; Attire</h2>
+        <p>
+          It will be autumn in the Pacific Northwest; We expect <span class="highlight">40-50F</span> temperatures with a likely chance of <span class="highlight">mist or rain</span>.
+          <br />
+          We suggest wearing or bringing warm layers and a raincoat or umbrella so you'll be comfortable through to the night.
+        </p>
+        <h3 id="attire">Attire</h3>
+        <table>
+          <tr>
+            <th class="highlight">Dress Code</th>
+            <td>formal to semi-formal</td>
+          </tr>
+          <tr>
+            <th class="highlight">Theme</th>
+            <td>woodland, mountain, garden, library, romance, rustic, elegance</td>
+          </tr>
+          <tr>
+            <th class="highlight">Inspiration</th>
+            <td>see our <a href="https:www.pinterest.com/nancetronaut/tien-wilson-wedding-guest-attire">pinterest board</a></td>
+          </tr>
+        </table>
+        <h3 id="pleasebring">Please bring</h3>
+        <table>
+          <tr>
+            <th class="highlight">For comfort</th>
+            <td>warm clothing, a raincoat or umbrella</td>
+          </tr>
+          <tr>
+            <th class="highlight">For merriment</th>
+            <td>your favorite tabletop card or boardgame</td>
+          </tr>
+        </table>
+      </div>
+      <!-- EVENTS-->
+      <div id="events">
+        <h2>Weekend Events</h2>
+        <p>
+          Yay, weekend! We're still planning our wedding weekend details; We'll email our attendees and update the website once everything is finalized.
+        </p>
+      </div>
+      <div>
+        <p class="center">
+          ^
+          <br />
+          <a href="#top" class="toplink">Top</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  @@include('footer.partial.html')
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      $('.google-maps-wrp').click(function(){
+        $('.google-maps-wrp').addClass('modal-time');
+      })
+      $('.google-maps-wrp .close-button').click(function(event){
+        $('.google-maps-wrp').removeClass('modal-time');
+        event.stopPropagation();
+      })
+    };
+  </script>
+</body>
+
+</html>

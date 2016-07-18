@@ -1,0 +1,32 @@
+#wedding-website .homepage {
+  .letter {
+    margin: 0px;
+  }
+  .homepage-hero:before {
+    background: url("../images/hero/forest.jpg");
+  }
+  .wedding-party-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    .block-wedding-party-wrp {
+      justify-content: space-between;
+      margin: 0 auto 30px auto;
+      width: 33%;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+      @media (max-width: 496px) {
+        width: 100%;
+      }
+      .block-wedding-party {
+        margin-bottom: 20px;
+        img {
+          border-radius: 100%;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

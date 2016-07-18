@@ -1,0 +1,23 @@
+#wedding-website .travellodging {
+  .reveal-giverideform,
+  .reveal-if-active,
+  .reveal-lodgingsform,
+  .reveal-needrideform,
+  .reveal-partnercontactform {
+    display: none;
+  }
+  input:checked {
+    &#withpartner ~ .reveal-partnercontactform {
+      display: block;
+    }
+    &#lodgingsform ~ .reveal-lodgingsform {
+      display: block;
+    }
+    &#giverideform ~ .reveal-giverideform {
+      display: block;
+    }
+    &#needrideform ~ .reveal-needrideform {
+      display: block;
+    }
+  }
+}

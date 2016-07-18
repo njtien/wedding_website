@@ -1,0 +1,21 @@
+sudo: false
+language: node_js
+node_js: 
+  - 6.1
+
+before_script:
+  - npm install -g bower
+  - npm install -g gulp
+script: gulp travis
+
+deploy:
+  provider: s3
+  skip_cleanup: true
+  access_key_id: AKIAJVUPMNBFE2GJCQ4A
+  secret_access_key:
+    secure: gtf3HgfOj4ABPhOxaj8CoOVxLSxPUhMCK7jgKGl3druEga7ikH3qyQ6kyZAjO3nmZb4My9oC+8i3XgSmRPUYRule8B6Vv5u8qoK61EBM4pf/BJzy2BvYMGHJYZxoI2cjHVvZdKza2FzI4w8+0FRtl7wUmVdbMXDUicKOi3wTXA0n7V2L3ahYBzw5EnsNUiTXB+vC3/rTAdEED/WDZF97yZul9FdqgKXGb1JEuHdlfox55sfMHmrnuwzxpf77spZ4jUrlh8F5bXIrE34c5GLzvLQT4uYG41MEzy9LLNs8iostyjuzoBhy3TJ0O3q9vFU81t75zKVKiHnlWCLnteT+qm3SZAnUJvEB6huAI4Yd5OniyTO79S3+YJv9oD13cJ89X/DJHf0+xeyGfN6GWw9q8H/9er1eO8o3z1Q1nrCcIQ7nnZwhNxmN4SWqSqZZgKcaNTSERU36LUIV5iF156bcjZulsS6Udznd4tv6SST97bHfNnlG1VcB5G2jknF7IdHob23JegtqR4ghfF80UieMeNQwid1ziZDSPQ0JdR0RjLURvZezNxvrKakfQYtgYpUH3+3D8t+m661cl3rffbWbiADvrKLX1+PlRqXLpYpy3XeVV78FGiLohpJW5meb1X8Vsyw0wKG3ufgc1KYLA0rrGbJLd1RpVksM3kIISYH3dPM=
+  bucket: nancyandwesley.com
+  local-dir: $TRAVIS_BUILD_DIR/public
+  acl: public_read
+  on:
+    repo: njtien/wedding_website
