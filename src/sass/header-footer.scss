@@ -1,12 +1,6 @@
 #wedding-website {
   .header {
     margin: 0 -40px;
-  }
-  .footer-stickyflex {
-    flex: 1;
-  }
-  .header,
-  .footer {
     .logo {
       font-size: 92%;
       font-weight: 500;
@@ -27,6 +21,15 @@
         color: 252525;
         text-decoration: none;
       }
+    }
+  }
+  .footer-stickyflex {
+    flex: 1;
+  }
+  .footer {
+    a {
+      display: block;
+      padding: 10px;
     }
   }
 }
