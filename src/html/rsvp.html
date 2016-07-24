@@ -6,8 +6,8 @@
 </head>
 
 <body id="wedding-website">
-  @@include('navigation.partial.html')
-  <div id="rsvp" class="rsvp-page">
+  <div class="rsvp-page">
+    @@include('navigation.partial.html')
     <!-- LOGIN -->
     <div id="rsvp-login">
       <h2 align="center">RSVP</h2>
@@ -21,11 +21,11 @@
           <ul>
             <li>
               <input type="text" name="secretUsername" id="secretUsername">
-              <label for="secretUsername">Username</label>
+              <label class="infield-label" for="secretUsername">Username</label>
             </li>
             <li>
               <input type="text" name="secretPassword" id="secretPassword">
-              <label for="secretPassword">Password</label>
+              <label class="infield-label" for="secretPassword">Password</label>
             </li>
             <div class="center">
               <input type="submit" class="btn-submit">
@@ -46,32 +46,45 @@
         <ul>
           <li class="uneditable">
             <input type="text" id="rsvpEmail" name="rsvpEmail" disabled>
-            <label for="rsvpEmail">Email</label>
+            <label class="infield-label" for="rsvpEmail">Email</label>
           </li>
           <li class="uneditable">
             <input type="text" id="rsvpName1" name="rsvpName1" disabled>
-            <label for="rsvpName1">Guest Name</label>
+            <label class="infield-label" for="rsvpName1">Guest Name</label>
           </li>
           <li>
-            <label class="radio-field-label">Your response</label>
-            <input type="radio" id="rsvpAnswer1true" name="rsvpAnswer1" value="Wouldn%E2%80%99t+miss+it+for+the+world"/>
-            <label for="rsvpAnswer1true">Yes</label>
+            <label class="infield-label radio-field-label">Your response</label>
+            <label for="rsvpAnswer1true" class="rad-radio-btn">
+              <input type="radio" id="rsvpAnswer1true" name="rsvpAnswer1"
+                value="Wouldn%E2%80%99t+miss+it+for+the+world" />
+              <i></i> Wouldn't miss it for the world
+            </label>
             <br>
-            <input type="radio" id="rsvpAnswer1false" name="rsvpAnswer1" value="Will+be+there+in+spirit"/>
-            <label for="rsvpAnswer1false">No</label>
+            <label for="rsvpAnswer1false" class="rad-radio-btn">
+              <input type="radio" id="rsvpAnswer1false" name="rsvpAnswer1"
+                value="Will+be+there+in+spirit" />
+              <i></i> I'll be there in spirit
+            </label>
           </li>
           <div id="plus-one-optional-group" style="display: none">
             <li class="uneditable">
-              <input type="text" id="rsvpName2" name="rsvpName2" disabled>
-              <label for="rsvpName2">Guest +1 Name</label>
+              <input type="text" id="rsvpName2" name="rsvpName2"
+                placeholder="Write 'N/A' or name of plusone (required!)" required />
+              <label class="infield-label" for="rsvpName2">Guest +1 Name</label>
             </li>
             <li>
-              <label class="radio-field-label">Your response</label>
-              <input type="radio" id="rsvpAnswer2true" name="rsvpAnswer2" value="Wouldn%E2%80%99t+miss+it+for+the+world"/>
-              <label for="rsvpAnswer2true">Yes</label>
+              <label class="radio-field-label infield-label">Your response</label>
+              <label for="rsvpAnswer2true" class="rad-radio-btn">
+                <input type="radio" id="rsvpAnswer2true" name="rsvpAnswer2"
+                  value="Wouldn%E2%80%99t+miss+it+for+the+world" />
+                <i></i> Wouldn't miss it for the world
+              </label>
               <br>
-              <input type="radio" id="rsvpAnswer2false" name="rsvpAnswer2" value="Will+be+there+in+spirit"/>
-              <label for="rsvpAnswer2false">No</label>
+              <label for="rsvpAnswer2false" class="rad-radio-btn">
+                <input type="radio" id="rsvpAnswer2false" name="rsvpAnswer2"
+                  value="Will+be+there+in+spirit"/>
+                <i></i> I'll be there in spirit
+              </label>
             </li>
           </div>
           <input type="submit" class="btn-submit">

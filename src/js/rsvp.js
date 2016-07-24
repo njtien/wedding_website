@@ -222,6 +222,10 @@ function acceptLogin() {
   document.getElementById('rsvpName2').value = decryptedGuest.plusone;
   if(decryptedGuest.plusone && decryptedGuest.plusone != ''){
     document.getElementById('plus-one-optional-group').style.display = 'block';
+    if(decryptedGuest.plusone === true || decryptedGuest.plusone.length <= 1){
+      $('#plus-one-optional-group .uneditable').removeClass('uneditable');
+      document.getElementById('rsvpName2').value = '';
+    }
   }
 }
 
@@ -242,7 +246,7 @@ function rsvpFormSubmit() {
     meta: decryptedGuest.formUrlCode,
     name1: decryptedGuest.name,
     answer1: $('input[name=rsvpAnswer1]:checked').val(),
-    name2: decryptedGuest.plusone,
+    name2: $('input[name=rsvpName2]').val(),
     answer2: $('input[name=rsvpAnswer2]:checked').val()
   };
 

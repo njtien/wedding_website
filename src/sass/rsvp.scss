@@ -1,9 +1,51 @@
-$color: #bdbdbd;
+$color: #4c4c4c;
 $bgColor: #fffdfa;
 #wedding-website .rsvp-page {
   #thank-you {
     margin: 60px 0;
-    font-size: 25px;
+    font-size: 85px;
+    line-height: 105px;
+  }
+  // more rad radio button:
+  .rad-radio-btn {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: auto;
+    position: static;
+    display: inline-block;
+    width: calc(100% - 50px);
+    font-size: 18px;
+    vertical-align: top;
+    padding: 8px 0;
+    line-height: 20px;
+    & > input {
+      visibility: hidden;
+      position: absolute;
+      width: 1px;
+      left: -999px;
+    }
+    & > i {
+      display: inline-block;
+      vertical-align: middle;
+      width:  22px;
+      height: 22px;
+      margin: -2px 5px 0px 10px;
+      border-radius: 50%;
+      transition: 0.2s;
+      box-shadow: inset 0 0 0 10px #fff;
+      border: 1px solid gray;
+      background: gray;
+    }
+    &:hover > i{
+      box-shadow: inset 0 0 0 3px #fff;
+      background: gray;
+    }
+    & > input:checked + i{
+      box-shadow: inset 0 0 0 3px #fff;
+      background: orange;
+    }
   }
   form {
     padding-bottom: 40px;
@@ -17,14 +59,14 @@ $bgColor: #fffdfa;
       list-style-type: none;
       margin: 3em auto;
       padding: 0;
-      max-width: 350px;
+      max-width: 425px;
     }
     li {
       border-bottom: 1px solid $color;
       margin: 0;
       position: relative;
       list-style: none;
-      label {
+      .infield-label {
         pointer-events: none;
         font-size: 70%;
         letter-spacing: 0.03em;
@@ -43,24 +85,9 @@ $bgColor: #fffdfa;
           margin: 2px 0 -5px 10px;
         }
       }
-      input[type=radio] + label {
-        pointer-events: auto;
-        position: static;
-        display: inline-block;
-        width: calc(100% - 50px);
-        font-size: 18px;
-        vertical-align: top;
-        line-height: 40px;
-      }
-      input[type=radio] {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin: 10px;
-      }
     }
     input {
-      color: darken($color, 15);
+      color: darken($color, 15%);
       background-color: transparent;
     }
     input,
@@ -90,8 +117,9 @@ $bgColor: #fffdfa;
       box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
     }
     .uneditable {
-      input {
-        cursor: not-allowed;
+      cursor: not-allowed;
+      * {
+        pointer-events: none;
       }
     }
   }
