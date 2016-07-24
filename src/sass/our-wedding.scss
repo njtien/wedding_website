@@ -4,6 +4,10 @@
   }
   .google-maps-wrp {
     margin: 20px -40px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 2px 10px 1px rgba(0,0,0,0.4);
+    }
     .close-button {
       display: none;
     }
