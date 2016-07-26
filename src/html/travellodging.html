@@ -42,19 +42,20 @@
       <h3>Airbnb</h3>
       <p>
         The most cost-effective lodgings are with Airbnb. Large Airbnb homes with multiple bedrooms and bathrooms can be split between multiple wedding guests with rates as low as $70/night in Seattle.
+      
+        If you've never used Airbnb before, <a href="http://www.airbnb.com/c/nancyt61">our referral link</a> will give you a $30 discount (and will give us $30 off our next stay, too!). <a href="http://www.airbnb.com/c/nancyt61">airbnb.com/c/nancyt61</a>
       </p>
-      <p class="infoblock">
-        <span class="highlight">Seattle</span> is approximately 30 minutes away from the airport and a 35 minute drive to Salish Lodge for the wedding. Airbnb rentals for private rooms and entire homes start from $80/night with most listings within $90-$160/night.
-      </p>
-      <p class="infoblock">
-        <span class="highlight">Issaquah</span> is a 15 minute drive to Salish Lodge, a 25 minute drive from the airport, and 20 minutes away from Seattle. Airbnb listings begin at $80/night.
-      </p>
-      <p class="infoblock">
-        There are also numerous Airbnb listings in <span class="highlight">Bellevue</span> and <span class="highlight">Sammamish</span>, which are located between Seattle and Issaquah.
-      </p>
-      <p>
-      <span class="highlight">Never used Airbnb before?</span> Use our link to get $30 off (and $30 for us, too)! <a href="http://www.airbnb.com/c/nancyt61">airbnb.com/c/nancyt61</a>
-      </p>
+      <div class="infoblock">
+        <p>
+          <span class="highlight">Seattle</span> is approximately 30 minutes away from the airport and a 35 minute drive to Salish Lodge for the wedding. Airbnb rentals for private rooms and entire homes start from $80/night with most listings within $90-$160/night.
+        </p>
+        <p>
+          <span class="highlight">Issaquah</span> is a 15 minute drive to Salish Lodge, a 25 minute drive from the airport, and 20 minutes away from Seattle. Airbnb listings begin at $80/night.
+        </p>
+        <p>
+          There are also numerous Airbnb listings in <span class="highlight">Bellevue</span> and <span class="highlight">Sammamish</span>, which are located between Seattle and Issaquah.
+        </p>
+      </div>
       <h3>Salish Lodge &amp; Spa</h3>
       <p>
         Please mention you are with the <span class="highlight">Tien-Wilson Wedding</span> or reservation <span class="highlight">#45V885</span> when booking your reservations for a discount.
@@ -64,237 +65,238 @@
         <a href="http://www.salishlodge.com/rooms.php">salishlodge.com/rooms.php</a>
       </p>
       <div class="infoblock">
-        <span class="highlight">About</span>
+        <h4>About</h4>
         <p>
           Salish Lodge is a Native-American owned historic luxury hotel. The Muckleshoot Tribe purchased Salish Lodge &amp; Spa in 2007, using profits to reacquire lands surrounding their reservation, preserve ancient salmon runs, and support community impact non-profit organizations involved in education, health and human services, the arts, civic/community advocacy for people of color, and environmental programs. In 2013, they bought back 150 square miles of forest surrounding their reservation in Washington state.
         </p>
-        <span class="highlight">Featured In</span>
+        <h4>Featured In</h4>
         <p>
           David Lynch's Twin Peaks features Salish Lodge as Ben Horn's "Great Northern Hotel" and Snoqualmie Falls as "Whitetail Falls."
         </p>
       </div>
     </div>
-    <hr>
-    <!-- SHARING -->
-    <div id="sharing" style="display:none">
-      <h2>Sharing Lodging &amp; Rides</h2>
-      <p>
-        Want to share accomodations or carpool? If you need help finding another guest to share with, we're happy to help!
-      </p>
-    </div>
-    <!-- SHARING FORMS-->
-    <div id="sharingforms" style="display:none">
-      <form action="">
-        <div id="contact">
+  </div>
+  <hr>
+  <!-- SHARING -->
+  <div id="sharing" style="display:none">
+    <h2>Sharing Lodging &amp; Rides</h2>
+    <p>
+      Want to share accomodations or carpool? If you need help finding another guest to share with, we're happy to help!
+    </p>
+  </div>
+  <!-- SHARING FORMS-->
+  <div id="sharingforms" style="display:none">
+    <form action="">
+      <div id="contact">
+        <fieldset>
+          <legend>
+            <h4>Contact Information</h4>
+          </legend>
+          <div id="primary-contact">
+            <label>Full Name
+              <input type="text" required name="name">
+            </label>
+            <br />
+            <label>Email
+              <input type="email" required name="email">
+            </label>
+            <br />
+          </div>
+          <div id="partner-contact">
+            <input type="checkbox" id="withpartner" name="withpartner">
+            <label for="withpartner">I am traveling with my significant other.</label>
+            <div class="reveal-partnercontactform">
+              <div id="partnercontactform">
+                <label for="partner-name">Partner's Full Name
+                  <input type="text" name="partner-name">
+                </label>
+                <br />
+                <label for="partner-email"> Partner's Email
+                  <input type="email" name="partner-email">
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div>
           <fieldset>
             <legend>
-              <h4>Contact Information</h4>
+              <h4>I would like to</h4>
             </legend>
-            <div id="primary-contact">
-              <label>Full Name
-                <input type="text" required name="name">
-              </label>
-              <br />
-              <label>Email
-                <input type="email" required name="email">
-              </label>
-              <br />
-            </div>
-            <div id="partner-contact">
-              <input type="checkbox" id="withpartner" name="withpartner">
-              <label for="withpartner">I am traveling with my significant other.</label>
-              <div class="reveal-partnercontactform">
-                <div id="partnercontactform">
-                  <label for="partner-name">Partner's Full Name
-                    <input type="text" name="partner-name">
+            <input type="radio" id="lodgingsform" required name="sharetype" value="lodgingsform">
+            <label for="lodgingsform">Find a room or flatmate</label>
+            <input type="radio" id="giverideform" required name="sharetype" value="giverideform">
+            <label for="giverideform">Give a ride</label>
+            <input type="radio" id="needrideform" required name="sharetype" value="needrideform">
+            <label for="needrideform">Need a ride</label>
+            <!--REVEAL LODGINGSFORM-->
+            <div class="reveal-lodgingsform">
+              <div id="lodging-dates">
+                <p>
+                  <label>Arrive on:
+                    <input type="date" required name="arrive">
                   </label>
                   <br />
-                  <label for="partner-email"> Partner's Email
-                    <input type="email" name="partner-email">
+                  <label>Depart on:
+                    <input type="date" required name="depart">
                   </label>
-                </div>
+                </p>
+              </div>
+              <div id="lodging-location">
+                <p>
+                  I hope to stay in:
+                  <br />
+                  <label>
+                    <input type="checkbox" name="lodging" value="salish" /> Salish Lodge &amp; Spa</label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="lodging" value="seattle" /> Seattle</label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="lodging" value="other" /> Other:
+                    <input type="text" name="lodging-location-other" placeholder="e.g. &ldquo;Bellevue&rdquo;">
+                  </label>
+                </p>
+              </div>
+              <div id="lodging-sharing">
+                <p>
+                  I want to share a:
+                  <br>
+                  <label>
+                    <input type="checkbox" name="lodging" value="room" /> Room</label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="lodging" value="home" /> Home</label>
+                </p>
+              </div>
+              <div id="lodging-comments">
+                <p>
+                  <label>
+                    Anything else we should know?
+                    <br />
+                    <textarea name="lodging-comments" cols="110" rows="4" placeholder="e.g. &ldquo;My first choice is to share a home but I would also share a room.&rdquo;"></textarea>
+                  </label>
+                </p>
               </div>
             </div>
-          </fieldset>
-          <div>
-            <fieldset>
-              <legend>
-                <h4>I would like to</h4>
-              </legend>
-              <input type="radio" id="lodgingsform" required name="sharetype" value="lodgingsform">
-              <label for="lodgingsform">Find a room or flatmate</label>
-              <input type="radio" id="giverideform" required name="sharetype" value="giverideform">
-              <label for="giverideform">Give a ride</label>
-              <input type="radio" id="needrideform" required name="sharetype" value="needrideform">
-              <label for="needrideform">Need a ride</label>
-              <!--REVEAL LODGINGSFORM-->
-              <div class="reveal-lodgingsform">
-                <div id="lodging-dates">
-                  <p>
-                    <label>Arrive on:
-                      <input type="date" required name="arrive">
-                    </label>
-                    <br />
-                    <label>Depart on:
-                      <input type="date" required name="depart">
-                    </label>
-                  </p>
-                </div>
-                <div id="lodging-location">
-                  <p>
-                    I hope to stay in:
-                    <br />
-                    <label>
-                      <input type="checkbox" name="lodging" value="salish" /> Salish Lodge &amp; Spa</label>
-                    <br />
-                    <label>
-                      <input type="checkbox" name="lodging" value="seattle" /> Seattle</label>
-                    <br />
-                    <label>
-                      <input type="checkbox" name="lodging" value="other" /> Other:
-                      <input type="text" name="lodging-location-other" placeholder="e.g. &ldquo;Bellevue&rdquo;">
-                    </label>
-                  </p>
-                </div>
-                <div id="lodging-sharing">
-                  <p>
-                    I want to share a:
-                    <br>
-                    <label>
-                      <input type="checkbox" name="lodging" value="room" /> Room</label>
-                    <br />
-                    <label>
-                      <input type="checkbox" name="lodging" value="home" /> Home</label>
-                  </p>
-                </div>
-                <div id="lodging-comments">
-                  <p>
-                    <label>
-                      Anything else we should know?
-                      <br />
-                      <textarea name="lodging-comments" cols="110" rows="4" placeholder="e.g. &ldquo;My first choice is to share a home but I would also share a room.&rdquo;"></textarea>
-                    </label>
-                  </p>
-                </div>
-              </div>
-              <!--REVEAL GIVERIDEFORM-->
-              <div class="reveal-giverideform">
+            <!--REVEAL GIVERIDEFORM-->
+            <div class="reveal-giverideform">
+              <p>
+                <span class="note">Thanks for offering to help! We'll let you know if someone staying nearby needs a ride.</span>
+              </p>
+              <div id="lodging-address">
                 <p>
-                  <span class="note">Thanks for offering to help! We'll let you know if someone staying nearby needs a ride.</span>
+                  <label>Lodging Address
+                    <br />
+                    <textarea required name="address" cols="110" rows="2"></textarea>
+                  </label>
                 </p>
-                <div id="lodging-address">
-                  <p>
-                    <label>Lodging Address
-                      <br />
-                      <textarea required name="address" cols="110" rows="2"></textarea>
-                    </label>
-                  </p>
-                </div>
-                <div id="seats-available">
-                  <p>
-                    <label>
-                      How many seats do you have available in your car?
-                      <br />
-                      <textarea required name="seatsavailable" cols="110" rows="2" placeholder="e.g &ldquo;Three seats.&rdquo;"></textarea>
-                    </label>
-                  </p>
-                </div>
-                <div id="givearide-comments">
-                  <p>
-                    <label>Anything else we should know?
-                      <br />
-                      <textarea name="givearide-comments" cols="110" rows="4" placeholder="e.g. &ldquo;I plan to arrive an hour early to the wedding so I can visit the park.&rdquo;"></textarea>
-                    </label>
-                  </p>
-                </div>
               </div>
-              <!-- REVEAL NEEDRIDEFORM -->
-              <div class="reveal-needrideform">
-                <div>
-                  <p>
-                    <span class="note">We'll see if a friend staying nearby can give you a ride.</span>
-                  </p>
-                  <p>
-                    <label>Lodging Address
-                      <br />
-                      <textarea required name="address" cols="110" rows="2"></textarea>
-                    </label>
-                  </p>
-                </div>
-                <div id="seats-needed">
-                  <p>
-                    <label>
-                      How many seat(s) do you need?
-                      <br />
-                      <textarea required name="seats-needed" cols="110" rows="2" placeholder="e.g. &ldquo;We need three seats for my partner, child, and myself.&rdquo;"></textarea>
-                    </label>
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    <label>
-                      Anything else we should know?
-                      <br />
-                      <textarea name="givearide-comments" cols="110" rows="4" placeholder="e.g. &ldquo;We only need a ride home from the wedding.&rdquo;"></textarea>
-                    </label>
-                  </p>
-                </div>
+              <div id="seats-available">
+                <p>
+                  <label>
+                    How many seats do you have available in your car?
+                    <br />
+                    <textarea required name="seatsavailable" cols="110" rows="2" placeholder="e.g &ldquo;Three seats.&rdquo;"></textarea>
+                  </label>
+                </p>
+              </div>
+              <div id="givearide-comments">
+                <p>
+                  <label>Anything else we should know?
+                    <br />
+                    <textarea name="givearide-comments" cols="110" rows="4" placeholder="e.g. &ldquo;I plan to arrive an hour early to the wedding so I can visit the park.&rdquo;"></textarea>
+                  </label>
+                </p>
+              </div>
+            </div>
+            <!-- REVEAL NEEDRIDEFORM -->
+            <div class="reveal-needrideform">
+              <div>
+                <p>
+                  <span class="note">We'll see if a friend staying nearby can give you a ride.</span>
+                </p>
+                <p>
+                  <label>Lodging Address
+                    <br />
+                    <textarea required name="address" cols="110" rows="2"></textarea>
+                  </label>
+                </p>
+              </div>
+              <div id="seats-needed">
+                <p>
+                  <label>
+                    How many seat(s) do you need?
+                    <br />
+                    <textarea required name="seats-needed" cols="110" rows="2" placeholder="e.g. &ldquo;We need three seats for my partner, child, and myself.&rdquo;"></textarea>
+                  </label>
+                </p>
               </div>
               <div>
                 <p>
-                  <input type="submit" class="submit" name="submit" value="Submit">
+                  <label>
+                    Anything else we should know?
+                    <br />
+                    <textarea name="givearide-comments" cols="110" rows="4" placeholder="e.g. &ldquo;We only need a ride home from the wedding.&rdquo;"></textarea>
+                  </label>
                 </p>
               </div>
-            </fieldset>
-          </div>
+            </div>
+            <div>
+              <p>
+                <input type="submit" class="submit" name="submit" value="Submit">
+              </p>
+            </div>
+          </fieldset>
         </div>
-      </form>
-    </div>
-    <hr style="display:none">
-    <!-- RECOMMENDATIONS -->
-    <div id="recommendations">
-      <h2>Places to Go, Things to See!</h2> So we're not all that familiar with the Seattle area but these are our favorite places we've happened upon the two times we've visited.
-      <h3 id="coffee">Coffee &amp; Tea</h3>
-      <li>Milstead &amp; Co., Fremont, Seattle</li>
-      <li>Storyville Coffee Company, Queen Anne, Seattle</li>
-      <li>Remedy Teas, Seattle*</li>
-      <li>Cederberg Tea House, Queen Anne, Seattle*</li>
-      <h3 id="food">Food &amp; Restaurants</h3>
-      <li>Joule, Wallingford, Seattle</li>
-      <li>Yoroshiku Ramen, Wallingford, Seattle</li>
-      <li>Tamarind Tree, International District, Seattle</li>
-      <li>Fat Hen, Ballard, Seattle</li>
-      <li>Paseo, Fremont, Seattle</li>
-      <li>Manolin, Fremont, Seattle*</li>
-      <h3 id="bars">Bars</h3>
-      <li>The Pine Box, Capitol Hill, Seattle</li>
-      <li>Radiator Whiskey, Downtown Seattle</li>
-      <h3 id="bookstores">Bookstores</h3>
-      <li>Ada's Technical Books &amp; Cafe, Capitol Hill, Seattle</li>
-      <li>Book Larder, Fremont, Seattle</li>
-      <h3 id="Games">Games</h3>
-      <li>Card Kingdom &amp; Cafe Mox, Ballard, Seattle</li>
-      <li>Mox Boarding House, Bellevue</li>
-      <li>Seattle Pinball Museum, Seattle*</li>
-      <h3 id="movies">Cinema</h3>
-      <li>SIFF Cinema, Seattle</li>
-      <li>Cinerama, Belltown, Seattle</li>
-      <h3 id="parks">Parks</h3>
-      <li>Kerry Park</li>
-      <li>Volunteer Park &amp; Conservatory*</li>
-      <li>Washington Park Arboretum*</li>
-      <h3 id="hiking">Hiking</h3>
-      <li>Rattlesnake Ridge*</li>
-      <li>Snow Lake*</li>
-      <li>Mount Si*</li>
-      <li>Snoqualmie Pass*</li>
-      <h3 id="spa">Spa</h3>
-      <li>Banya 5, Lower Queen Anne, Seattle</li>
-      <p>
-        <span class="note">* We haven't tried this out yet, but it's on the list!</span>
-      </p>
-    </div>
-    @@include('footer.partial.html')
+      </div>
+    </form>
+  </div>
+  <hr style="display:none">
+  <!-- RECOMMENDATIONS -->
+  <div id="recommendations">
+    <h2>Places to Go, Things to See!</h2> So we're not all that familiar with the Seattle area but these are our favorite places we've happened upon the two times we've visited.
+    <h3 id="coffee">Coffee &amp; Tea</h3>
+    <li>Milstead &amp; Co., Fremont, Seattle</li>
+    <li>Storyville Coffee Company, Queen Anne, Seattle</li>
+    <li>Remedy Teas, Seattle*</li>
+    <li>Cederberg Tea House, Queen Anne, Seattle*</li>
+    <h3 id="food">Food &amp; Restaurants</h3>
+    <li>Joule, Wallingford, Seattle</li>
+    <li>Yoroshiku Ramen, Wallingford, Seattle</li>
+    <li>Tamarind Tree, International District, Seattle</li>
+    <li>Fat Hen, Ballard, Seattle</li>
+    <li>Paseo, Fremont, Seattle</li>
+    <li>Manolin, Fremont, Seattle*</li>
+    <h3 id="bars">Bars</h3>
+    <li>The Pine Box, Capitol Hill, Seattle</li>
+    <li>Radiator Whiskey, Downtown Seattle</li>
+    <h3 id="bookstores">Bookstores</h3>
+    <li>Ada's Technical Books &amp; Cafe, Capitol Hill, Seattle</li>
+    <li>Book Larder, Fremont, Seattle</li>
+    <h3 id="Games">Games</h3>
+    <li>Card Kingdom &amp; Cafe Mox, Ballard, Seattle</li>
+    <li>Mox Boarding House, Bellevue</li>
+    <li>Seattle Pinball Museum, Seattle*</li>
+    <h3 id="movies">Cinema</h3>
+    <li>SIFF Cinema, Seattle</li>
+    <li>Cinerama, Belltown, Seattle</li>
+    <h3 id="parks">Parks</h3>
+    <li>Kerry Park</li>
+    <li>Volunteer Park &amp; Conservatory*</li>
+    <li>Washington Park Arboretum*</li>
+    <h3 id="hiking">Hiking</h3>
+    <li>Rattlesnake Ridge*</li>
+    <li>Snow Lake*</li>
+    <li>Mount Si*</li>
+    <li>Snoqualmie Pass*</li>
+    <h3 id="spa">Spa</h3>
+    <li>Banya 5, Lower Queen Anne, Seattle</li>
+    <p>
+      <span class="note">* We haven't tried this out yet, but it's on the list!</span>
+    </p>
+  </div>
+  @@include('footer.partial.html')
   </div>
 </body>
 
