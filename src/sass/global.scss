@@ -3,7 +3,7 @@
 }
 #wedding-website {
   font-family: 'Cardo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-  font-size: 110%;
+  font-size: 16px;
   line-height: 1.75em;
   letter-spacing: 0.045em;
   padding: 2px 40px;
@@ -20,25 +20,36 @@
   }
   h1,
   h2 {
-    font-size: 150%;
+    font-size: 22px;
     letter-spacing: 0.05em;
-    margin: 24px 0;
+    margin: 28px 0 1px 0;
   }
   h3,
   h4 {
-    font-size: 125%;
+    font-size: 20px;
     letter-spacing: 0.05em;
-    margin: 16px 0;
+    margin: 26px 0 10px 0;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   }
   .highlight {
     font-family: 'Courier';
-    font-size: 95%;
+    font-size: 16px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     text-align: left;
   }
   th.highlight {
     width: 170px;
+  }
+  .infoblock {
+    margin-left: 36px;
+    @media (max-width: 600px){
+      margin-left: 0px;
+    }
   }
   span {
     &.display {
@@ -92,6 +103,9 @@
     margin-left: 1%;
     margin-top: 0.5em;
     list-style-position: outside;
+  }
+  .un-italicize {
+    font-style: normal;
   }
   .hero-banner {
     position: relative;
