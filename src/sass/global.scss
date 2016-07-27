@@ -7,10 +7,12 @@
 #wedding-website {
   font-family: 'Cardo', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 16px;
+  font-color: 252525;
   line-height: 1.75em;
   letter-spacing: 0.045em;
   padding: 2px 40px;
   margin-bottom: 30px;
+  background-color: fafafa;
   display: flex;
   min-height: 75vh;
   flex-direction: column;
@@ -175,7 +177,7 @@
     font-style: italic;
     font-size: 18px;
     letter-spacing: 0.02em;
-    color: darkgreen;
+    color: #638cc1;
     text-decoration: underline;
   }
   a:hover {
