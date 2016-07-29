@@ -74,7 +74,7 @@ gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/images/**/*', ['copyimages']);
   gulp.watch('src/html/*', ['fileinclude']);
-  gulp.watch('src/js/*.js', ['babel']);
+  gulp.watch('src/js/*', ['babel', 'fileinclude']);
 });
 
 // Default Task

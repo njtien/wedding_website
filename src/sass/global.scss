@@ -42,6 +42,23 @@
     text-transform: uppercase;
     margin: 2px 0 0px 0;
   }
+  
+  p,
+  p.infoblock,
+  div.infoblock,
+  h1,
+  h2,
+  h3,
+  h4,
+  table.infoblock,
+  #note,
+  #un-italicize,
+  #infoblock {
+    max-width: 750px;
+    width: 100%;
+    margin: 18px auto 14px auto;
+  }
+  
   hr {
     border: 0;
     height: 2px;
@@ -67,10 +84,30 @@
     padding-left: 44px;
     padding-bottom: 20px;
   }
+  .note {
+    font-family: 'Cardo';
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+  .note,
   .infoblock {
-    margin-left: 44px;
-    @media (max-width: 600px) {
-      margin-left: 0px;
+    &.indented-section,
+    &.indented-section-double {
+      margin: 20px 0;
+      padding: 0;
+    }
+    &.indented-section  {
+      margin-left: 44px;
+    }
+    &.indented-section-double {
+      margin-left: 84px;
+    }
+    &.indented-section,
+    &.indented-section-double {
+      @media (max-width: 600px) {
+        margin-left: 0px;
+      }
     }
   }
   span {
@@ -80,12 +117,6 @@
       font-style: italic;
       letter-spacing: 0.05em;
       line-height: 2em;
-    }
-    &.note {
-      font-family: 'Cardo';
-      font-size: 18px;
-      font-style: italic;
-      letter-spacing: 0.05em;
     }
     &.italic {
       font-family: 'Cardo';
