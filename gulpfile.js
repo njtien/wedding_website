@@ -31,11 +31,11 @@ gulp.task('copyimages', ['clean-images'], function() {
 
 // HTML
 gulp.task('clean-html', function () {
-  return gulp.src('./public/*.html', {read: false})
+  return gulp.src('./public/*', {read: false})
     .pipe(clean());
 });
 gulp.task('fileinclude', ['clean-html'], function() {
-  gulp.src(['src/html/*.html', '!src/html/*.partial.html'])
+  gulp.src(['src/html/*', '!src/html/*.partial.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
