@@ -7,12 +7,14 @@ var Server = require('karma').Server;
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 
-// SASS
-gulp.task('clean-css', function () {
-  return gulp.src('./public/css/*', {read: false})
+// Clean
+gulp.task('clean', function () {
+  return gulp.src('./public/*', {read: false})
     .pipe(clean());
 });
-gulp.task('sass', ['clean-css'], function () {
+
+// SASS
+gulp.task('sass', ['clean'], function () {
   return gulp.src(['src/sass/css-reset.scss', 'src/sass/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
@@ -20,21 +22,13 @@ gulp.task('sass', ['clean-css'], function () {
 });
 
 // IMAGES
-gulp.task('clean-images', function () {
-  return gulp.src('./public/images/*', {read: false})
-    .pipe(clean());
-});
-gulp.task('copyimages', ['clean-images'], function() {
+gulp.task('copyimages', ['clean'], function() {
  gulp.src('src/images/**')
     .pipe(gulp.dest('public/images'));
 });
 
 // HTML
-gulp.task('clean-html', function () {
-  return gulp.src('./public/*', {read: false})
-    .pipe(clean());
-});
-gulp.task('fileinclude', ['clean-html'], function() {
+gulp.task('fileinclude', ['clean'], function() {
   gulp.src(['src/html/*', '!src/html/*.partial.html'])
     .pipe(fileinclude({
       prefix: '@@',
@@ -43,12 +37,7 @@ gulp.task('fileinclude', ['clean-html'], function() {
     .pipe(gulp.dest('public'));
 });
 
-// JS
-gulp.task('clean-js', function () {
-  return gulp.src('./public/js', {read: false})
-    .pipe(clean());
-});
-gulp.task('babel', ['clean-js'], function () {
+gulp.task('babel', ['clean'], function () {
   return gulp.src(['src/js/*.js', '!src/js/*.Spec.js'])
     .pipe(babel({
       presets: ['es2015']
@@ -71,14 +60,11 @@ gulp.task('test:watch', function (done) {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/images/**/*', ['copyimages']);
-  gulp.watch('src/html/*', ['fileinclude']);
-  gulp.watch('src/js/*', ['babel', 'fileinclude']);
+  gulp.watch('src/**/*', ['sass', 'copyimages', 'fileinclude', 'babel']);
 });
 
 // Default Task
 gulp.task('default', ['sass', 'copyimages', 'fileinclude', 'babel', 'watch']);
 
 // Travis (prod) Task
-gulp.task('travis', ['sass', 'copyimages', 'fileinclude', 'babel', 'test']);
+gulp.task('travis', ['sass', 'copyimages', 'fileinclude', 'babel']);
