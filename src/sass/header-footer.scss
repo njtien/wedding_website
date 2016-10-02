@@ -2,8 +2,8 @@
   // lazy way to select active selected nav item
   .our-wedding .nav-ourw,
   .registry .nav-regs,
-  .travellodging .nav-trvl,
-  .rsvp-page .nav-rsvp {
+  .rsvp-page .nav-rsvp,
+  .travellodging .nav-trvl {
     border-bottom: solid 3px darkgrey;
   }
   .nav-header {
@@ -16,10 +16,10 @@
       font-weight: 500;
       letter-spacing: 0.4em;
     }
-  .nav-inner-wrap {
-    margin: 0 auto;
-    max-width: 980px;
-  }
+    .nav-inner-wrap {
+      margin: 0 auto;
+      max-width: 980px;
+    }
     a {
       font-family: 'Helvetica Neue', 'Helvetica', 'sans-serif';
       color: 252525;
@@ -31,7 +31,7 @@
       height: 3em;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 13px 20px;
+      padding: 13px 14px;
       white-space: nowrap;
       &:hover {
         color: 252525;
