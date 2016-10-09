@@ -5,8 +5,37 @@
   .letter {
     margin: 0px;
   }
-  .homepage-hero:before {
-    background: url("../images/hero/forest.jpg");
+  .homepage-hero {
+    padding: 50px 0 30px 0;
+    &:before {
+      background: url("../images/hero/forest.jpg");
+    }
+    p {
+      margin: 22px auto;
+      padding: 0;
+    }
+    .engagement-pictures-link {
+      display: block;
+      width: 250px;
+      max-width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      line-height: 23px;
+      padding: 3px;
+      border-radius: 3px;
+      font-size: 12px;
+      img {
+        opacity: 0.65;
+      }
+      &:hover {
+        color: black;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.1);
+        img {
+          opacity: 1;
+        }
+      }
+    }
   }
   .wedding-party-wrapper {
     display: flex;
